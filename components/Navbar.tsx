@@ -104,7 +104,7 @@ export default function Navbar() {
 
           {/* Let's Talk */}
           <Link
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center gap-2 bg-violet-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full
               hover:bg-violet-700 hover:shadow-lg hover:shadow-violet-200 hover:-translate-y-0.5
               active:translate-y-0 active:shadow-none
@@ -162,7 +162,7 @@ export default function Navbar() {
                 </motion.div>
               ))}
               <Link
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMenuOpen(false)}
                 className="mt-3 inline-flex justify-center bg-violet-600 text-white text-sm font-semibold px-5 py-3 rounded-full hover:bg-violet-700 transition-colors"
               >

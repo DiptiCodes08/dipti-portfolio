@@ -88,7 +88,7 @@ export default function HeroSection() {
               </svg>
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 bg-white text-stone-700 font-semibold px-7 py-3.5 rounded-full
                 border border-stone-200 hover:border-violet-300 hover:text-violet-600 hover:shadow-md hover:-translate-y-0.5
                 active:translate-y-0 transition-all duration-200"
