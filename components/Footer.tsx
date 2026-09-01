@@ -47,7 +47,9 @@ export default function Footer() {
               </svg>
             </Link>
             <Link
-              href="mailto:aryaldipti42@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&to=aryaldipti42@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Email"
               className="w-9 h-9 rounded-full bg-stone-800 border border-stone-700 flex items-center justify-center hover:bg-violet-600 hover:border-violet-600 transition-all duration-200"
             >

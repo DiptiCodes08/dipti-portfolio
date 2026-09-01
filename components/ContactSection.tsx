@@ -31,7 +31,9 @@ export default function ContactSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="mailto:aryaldipti42@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&to=aryaldipti42@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2.5 bg-violet-600 text-white font-semibold px-8 py-4 rounded-full
                   hover:bg-violet-700 hover:shadow-xl hover:shadow-violet-200 hover:-translate-y-0.5
                   active:translate-y-0 transition-all duration-200"
