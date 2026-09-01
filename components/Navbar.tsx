@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import SmoothScrollLink from "./SmoothScrollLink";
 
 const navLinks = [
   { label: "Home",       href: "#home"       },
@@ -62,8 +63,8 @@ export default function Navbar() {
             const isActive = activeSection === id;
             return (
               <li key={link.href}>
-                <Link
-                  href={link.href}
+                <SmoothScrollLink
+                  to={id}
                   className={`relative px-3 py-1.5 text-sm font-medium rounded-full transition-colors duration-200 ${
                     isActive
                       ? "text-violet-600"
@@ -78,7 +79,7 @@ export default function Navbar() {
                     />
                   )}
                   <span className="relative z-10">{link.label}</span>
-                </Link>
+                </SmoothScrollLink>
               </li>
             );
           })}
@@ -103,8 +104,8 @@ export default function Navbar() {
           </a>
 
           {/* Let's Talk */}
-          <Link
-            href="/#contact"
+          <SmoothScrollLink
+            to="contact"
             className="inline-flex items-center gap-2 bg-violet-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full
               hover:bg-violet-700 hover:shadow-lg hover:shadow-violet-200 hover:-translate-y-0.5
               active:translate-y-0 active:shadow-none
@@ -114,7 +115,7 @@ export default function Navbar() {
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </Link>
+          </SmoothScrollLink>
         </div>
 
         {/* Hamburger */}
@@ -148,8 +149,8 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0, transition: { delay: i * 0.05 } }}
                 >
-                  <Link
-                    href={link.href}
+                  <SmoothScrollLink
+                    to={link.href.replace("#", "")}
                     onClick={() => setMenuOpen(false)}
                     className={`block px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                       activeSection === link.href.replace("#", "")
@@ -158,16 +159,16 @@ export default function Navbar() {
                     }`}
                   >
                     {link.label}
-                  </Link>
+                  </SmoothScrollLink>
                 </motion.div>
               ))}
-              <Link
-                href="/#contact"
+              <SmoothScrollLink
+                to="contact"
                 onClick={() => setMenuOpen(false)}
                 className="mt-3 inline-flex justify-center bg-violet-600 text-white text-sm font-semibold px-5 py-3 rounded-full hover:bg-violet-700 transition-colors"
               >
                 Let&apos;s Talk
-              </Link>
+              </SmoothScrollLink>
               <a
                 href="/cv/Dipti_Aryal_CV_Final.pdf"
                 target="_blank"
