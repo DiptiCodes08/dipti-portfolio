@@ -53,6 +53,22 @@ const projects = [
     actionHref: "/work/herald-sync",
     figmaHref: "#", // Replace with your Figma prototype URL
   },
+  {
+    title: "UX Annotator Internship",
+    subtitle:
+      "Captured website screenshots and used bounding boxes to highlight click targets and document user flows for UX analysis at Watobu. Also created graphic design assets for Nihongo Nepal and provided a testimonial for Foundery.",
+    role: "UX Annotator Intern",
+    tools: ["Screenshot Capture", "Bounding Box Annotation", "User Flow Docs", "Figma", "Graphic Design"],
+    tags: ["UX Annotation", "User Flows", "Internship"],
+    category: "UX Research",
+    accentColor: "#d97706",
+    bgGradient: "linear-gradient(135deg, #92400e 0%, #d97706 60%, #fbbf24 100%)",
+    imagePath: "/images/watobu/cover.png",    imageAlt: "UX Annotator Internship — Progressive Labs / Watobu",
+    featured: false,
+    buttonType: "project" as const,
+    actionHref: "/work/watobu",
+    figmaHref: "#",
+  },
 ];
 
 export default function WorkSection() {

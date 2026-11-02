@@ -6,6 +6,23 @@ import ScrollReveal from "./ScrollReveal";
 
 const experiences = [
   {
+    role: "UX Annotator Intern",
+    company: "Progressive Labs — Watobu, Nihongo Nepal & Foundery",
+    period: "2026",
+    type: "Internship",
+    description:
+      "Worked as a UX Annotator for Watobu, capturing website screenshots and using bounding boxes to highlight click targets and document user flows for UX analysis. Also contributed graphic design work for Nihongo Nepal and provided a testimonial for Foundery as part of the same internship programme at Progressive Labs.",
+    tags: ["UX Annotation", "User Flows", "Bounding Boxes", "Screenshot Documentation", "Graphic Design", "Figma"],
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M8 12h8M12 8v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx="8" cy="8" r="1" fill="currentColor"/>
+        <circle cx="16" cy="16" r="1" fill="currentColor"/>
+      </svg>
+    ),
+  },
+  {
     role: "UI/UX Design Intern",
     company: "Herald Development Platform",
     period: "2025",
