@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BackToWork from "@/components/BackToWork";
 
@@ -183,6 +184,74 @@ export default function WatobuProject() {
             </span>
           ))}
         </div>
+
+        {/* ── Foundery designs ── */}
+        <h2 className="text-2xl font-bold text-stone-900 tracking-tight mt-14 mb-2">
+          Foundery Designs
+        </h2>
+        <p className="text-[15px] text-stone-600 leading-relaxed mb-6">
+          Created two graphic designs for Foundery as part of the Progressive Labs internship — a customer testimonial graphic and a myth vs reality post.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
+          {[
+            {
+              src: "/images/watobu/foundery-testimonial.png",
+              alt: "Foundery — custom testimonial graphic design created during Progressive Labs internship",
+              caption: "Customer Testimonial",
+            },
+            {
+              src: "/images/watobu/foundery-myth-vs-reality.png",
+              alt: "Foundery — myth vs reality graphic design created during Progressive Labs internship",
+              caption: "Myth vs Reality",
+            },
+          ].map((s) => (
+            <figure key={s.src} className="flex flex-col gap-2">
+              <div className="relative w-full rounded-2xl overflow-hidden bg-amber-50 border border-amber-100 aspect-square">
+                <Image src={s.src} alt={s.alt} fill className="object-cover" loading="lazy" unoptimized />
+                <div className="absolute inset-0 -z-10 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-amber-50 to-orange-50">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="18" height="18" rx="3" stroke="#d97706" strokeWidth="1.5"/>
+                    <path d="M8 12h8M12 8v8" stroke="#d97706" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                  <p className="text-xs font-semibold text-amber-300 text-center px-4">{s.caption}</p>
+                </div>
+              </div>
+              <figcaption className="text-center text-xs text-stone-400 font-medium">
+                {s.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        {/* ── Nihongo Nepal design ── */}
+        <h2 className="text-2xl font-bold text-stone-900 tracking-tight mt-14 mb-2">
+          Nihongo Nepal — Social Media Post
+        </h2>
+        <p className="text-[15px] text-stone-600 leading-relaxed mb-6">
+          Designed a social media post for Nihongo Nepal as part of the graphic design work within the same internship.
+        </p>
+        <figure className="flex flex-col gap-2 max-w-sm">
+          <div className="relative w-full rounded-2xl overflow-hidden bg-violet-50 border border-violet-100 aspect-square">
+            <Image
+              src="/images/watobu/nihongo-social-post.png"
+              alt="Nihongo Nepal — social media post graphic designed during Progressive Labs internship"
+              fill
+              className="object-cover"
+              loading="lazy"
+              unoptimized
+            />
+            <div className="absolute inset-0 -z-10 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-violet-50 to-purple-50">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke="#7c3aed" strokeWidth="1.5"/>
+                <path d="M8 12h8M12 8v8" stroke="#7c3aed" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+              <p className="text-xs font-semibold text-violet-300 text-center px-4">Social Media Post</p>
+            </div>
+          </div>
+          <figcaption className="text-center text-xs text-stone-400 font-medium">
+            Nihongo Nepal — social media post
+          </figcaption>
+        </figure>
 
         {/* Closing note */}
         <div className="mt-14 p-5 bg-amber-50/60 rounded-2xl border border-amber-100">

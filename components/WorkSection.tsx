@@ -3,6 +3,23 @@ import ScrollReveal from "./ScrollReveal";
 
 const projects = [
   {
+    title: "AURELLE",
+    subtitle:
+      "A fictional luxury jewelry brand campaign built with AI-generated imagery — designed for Instagram and Pinterest with a consistent champagne, ivory, and gold brand identity.",
+    role: "Designer",
+    tools: ["AI Image Generation", "Canva", "Google Sheets"],
+    tags: ["Campaign Design", "AI", "Social Media"],
+    category: "Campaign Design",
+    accentColor: "#C9A84C",
+    bgGradient: "linear-gradient(135deg, #78580a 0%, #C9A84C 60%, #F7E7CE 100%)",
+    imagePath: "/images/aurelle/cover.png",
+    imageAlt: "AURELLE — AI Luxury Jewelry Campaign",
+    featured: true,
+    buttonType: "project" as const,
+    actionHref: "/work/aurelle",
+    figmaHref: "#",
+  },
+  {
     title: "HomeEase",
     subtitle:
       "A mobile-first app connecting locals to trusted home service providers — from plumbing to cleaning — in just a few taps.",
